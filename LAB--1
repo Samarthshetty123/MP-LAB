@@ -1,0 +1,30 @@
+Program-1
+.model small
+.data
+a db 10
+b db 20
+c db ?
+.code
+    mov ax,@data
+    mov ds,ax
+    mov al,a
+    add al,b
+    mov c,al
+    mov ah,4ch
+    int 21h
+    end
+Program-2
+.model small
+.data
+a dw 1234
+b dw 1235
+c dw ?
+.code
+   mov ax,@data
+   mov ds,ax
+   mov ax,a
+   add ax,b
+   mov c,ax
+   mov ah,4ch
+   int 21h
+   end
